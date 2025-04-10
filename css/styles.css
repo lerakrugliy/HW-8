@@ -17,3 +17,75 @@
 .yellow {
     color: yellow;
 }
+:root {
+    --color-monday: #79ce80;
+    --color-tuesday: #7395d8;
+    --color-wednesday: #965cd8;
+    --color-thursday: #552f2f;
+    --color-friday: #418992;
+  
+    --hover-color: #000;
+    --focus-outline: 2px dashed #db608f;
+    --active-scale: 0.97;
+    --visited-color: purple;
+    --target-highlight: rgb(67, 104, 74);
+}
+  
+
+.monday li {
+    background-color: var(--color-monday);
+}
+.tuesday li {
+    background-color: var(--color-tuesday);
+}
+.wednesday li {
+    background-color: var(--color-wednesday);
+}
+.thursday li {
+    background-color: var(--color-thursday);
+}
+.friday li {
+    background-color: var(--color-friday);
+}
+  
+.day li:hover {
+    color: var(--hover-color);
+    font-weight: bold;
+    cursor: pointer;
+}
+  
+.day li:focus {
+    outline: var(--focus-outline);
+}
+  
+.day li:active {
+    transform: scale(var(--active-scale));
+}
+  
+.day li:visited {
+    color: var(--visited-color);
+}
+  
+.day li:target {
+    background-color: var(--target-highlight);
+}
+  
+.day li:first-child {
+    border-top: 2px solid #666;
+}
+  
+.day li:last-child {
+    border-bottom: 2px solid #666;
+}
+  
+.day li:nth-child(3) {
+    font-style: italic;
+}
+  
+.day li:nth-of-type(5) {
+    text-decoration: underline;
+}
+  
+.day li:not(:first-child):not(:last-child):not(:nth-child(3)):not(:nth-of-type(5)) {
+    border-left: 3px dotted #aaa;
+}
